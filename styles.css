@@ -1,0 +1,178 @@
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+
+:root{
+/*     --cor: #232f3e;
+    --cor2: #0f1111; */
+    --cor-bg-menu: #131921;
+    --cor-bg-menu-2: #232f3e;
+    --cor-bg-footer: #131A22;
+    --cinza: #E3E6E6;
+    --amarelo: #ffd814;
+    --laranja: #f08804;
+
+}
+
+/* -------------------------- TAGS -------------------------- */
+body {
+    font-family: 'Amazon Ember', sans-serif;
+    margin: 0;
+}
+header {
+    margin: 0;
+}
+
+main {
+    background-color: var(--cinza);
+}
+
+footer {
+    background-color: var(--cor-bg-footer);
+    color: var(--cinza);
+    font-size: 0.8rem;
+
+    & section{
+        padding: 16px;
+    }
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+     }
+}
+
+img{
+    width: 100%;
+}
+
+select {
+    font-family: 'Amazon Ember', sans-serif;
+    background-color: var(--cinza);
+    padding: 8px;
+    max-width: 90px;
+}
+nav{
+    min-width: 1000px;
+    display: flex;
+    
+    font-size: 0.9rem;
+   justify-content: space-between;
+
+
+    & * {
+     border: 1px solid white;
+    }
+
+    & a{
+        color: white;
+        margin: 0;
+    }
+
+    & ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    & li {
+        padding: 8px;
+        margin: 0;
+    }
+}
+
+input{
+    padding: 8px;
+}
+/* -------------------------- IDS -------------------------- */
+
+#logo{
+    width: 100px;
+}
+
+#barra-pesquisa{
+    background-color: white;
+    border-radius: 10px;
+    padding:0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+
+#nav-primaria {
+    background-color: var(--cor-bg-menu);
+    color: white;
+    margin: 0;
+    padding: 1em;
+}
+
+#nav-secundaria {
+    background-color: var(--cor-bg-menu-2);
+    color: white;
+    padding: 1em;
+}
+
+#hero {
+    margin-bottom: -250px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+
+    
+    & img {
+        width: 200px;
+    }
+}
+
+#categorias {
+
+    border: 1px solid red;
+    padding: 8px;
+    margin: 8px;
+    background-color: white;
+    & img{
+        width: 200px;
+
+    }
+}
+
+#categorias-scroll {
+    display: flex;
+    height: fit-content;
+    overflow-x: scroll;
+    gap: 10px;
+
+}
+
+#footer-links {
+    background-color: var(--cor-bg-menu-2);
+    padding: 16px;
+    color: white;
+    display: flex;
+    font-size: 1rem;
+
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+     
+}
+
+/* -------------------------- CLASS -------------------------- */
+
+.card {
+    max-width: 20vw;
+    border: 1px solid red;
+    background-color: white;
+    padding: 8px;
+}
