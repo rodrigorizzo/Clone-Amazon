@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     <link rel="icon" type="image/x-icon" href="src/amazon-icon.png">
 
     <title>Amazon.com.br | Tudo para você, de A a Z.</title>
@@ -13,30 +16,39 @@
 <body>
     <header>
         <nav id="nav-primaria">
-            <img id="logo" src="src/Amazon_logo.svg" alt="Amazon" />
-            <div>
-                <span>Entrega será feita em São Paulo</span><br>
-                <span>Atualizar CEP</span>
+        <figure style="padding: 12px 8px auto 8px; margin: 0;"><img style="padding: 12px 8px auto 8px;" id="logo" src="src/Amazon_logo.svg" alt="Amazon" /></figure>
+
+            <div class="menu-item">
+                <span class="material-symbols-outlined">location_on</span>
+                <div><a href="" style="color: gainsboro; font-size: 0.7rem;">Entrega será feita em São Paulo</a><br>
+                    <a href="">Atualizar CEP</a>
+                </div>
             </div>
-            <div id="barra-pesquisa">
-                <form action="">
-                    <select name="" id="">
-                        <option value="">Todos</option>
-                        <option value="">Alexa skills</option>
-                        <option value="">Alimentos e Bebidas</option>
-                        <option value="">Amazon Quase Novo</option>
-                    </select>
-                    <input type="text" placeholder="Pesquisar na Amazon">
-                    <input type="submit" value="Buscar">
-                </form>
+
+            <form action="" id="barra-pesquisa">
+                <select name="" id="">
+                    <option value="0">Todos</option>
+                    <option value="1">Alexa skills</option>
+                    <option value="2">Alimentos e Bebidas</option>
+                    <option value="3">Amazon Quase Novo</option>
+                </select>
+                <input type="text" placeholder="Pesquisar na Amazon">
+                <button id="botaoBusca"><span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+            </form>
+
+            <div class="menu-item">
+                <a href="">Olá, faça seu login<br>Contas e Listas</a>
+                <span class="material-symbols-outlined">arrow_drop_down</span>
             </div>
-            <div>
-                <span>Olá, faça seu login</span><br>
-                <span>Contas e Listas</span>
+
+            <div class="menu-item">
+                <a href="">Devoluções <br> e Pedidos</a>
             </div>
-            <span>Devoluções <br> e Pedidos</span>
-            <div>
-                <span>Carrinho</span>
+            <div class="menu-item">
+                <a href=""><span class="material-symbols-outlined">shopping_cart</span>Carrinho</a>
             </div>
 
 
@@ -44,15 +56,17 @@
         </nav>
         <nav id="nav-secundaria">
             <ul>
-                <li>Todos</li>
+                <li><span class="material-symbols-outlined">
+                        menu
+                    </span>Todos</li>
                 <li><a href="">Venda na Amazon</a></li>
                 <li><a href="">Mais Vendidos</a></li>
                 <li><a href="">Ofertas do Dia</a></li>
-                <li><a href="">Prime</a></li>
+                <li><a href="">Prime <span class="material-symbols-outlined">arrow_drop_down</span></a></li>
                 <li><a href="">Livros</a></li>
                 <li><a href="">Música</a></li>
             </ul>
-            <span>O App Day começa em</span>
+            <span class="menu-item">O App Day começa em</span>
         </nav>
     </header>
     <main>
@@ -147,7 +161,11 @@
             </div>
         </section>
 
-        <section id="recomendacoes"></section>
+        <section id="recomendacoes">
+            <h2>Veja recomendações personalizadas </h2>
+            <a>Faça seu login</a>
+            <p>Cliente novo? <a href="">Comece aqui.</a></p>
+        </section>
 
     </main>
     <footer>
@@ -185,16 +203,29 @@
                 <li><a href="">Cartão de Crédito</a></li>
             </ul>
 
+            <ul>
+                <li>Deixe-nos ajudar você</li>
+                <li><a href="">Sua conta</a></li>
+                <li><a href="">Frete e prazo de entrega</a></li>
+
+                <li><a href="">Devoluções e reembolsos</a></li>
+                <li><a href="">Gerencie seu conteúdo e dispositivos</a></li>
+                <li><a href="">Recalls e alertas de segurança do produto</a></li>
+                <li><a href="">Ajuda</a></li>
+            </ul>
+
         </section>
 
         <section id="footer-final">
-            <p><a href="">Condições de Uso</a> | <a href="">Notificação de Privacidade</a> | <a href="">Cookies</a> | 
+            <p><a href="">Condições de Uso</a> | <a href="">Notificação de Privacidade</a> | <a href="">Cookies</a> |
                 <a href="">Anúncios Baseados em Interesses </a>
             </p>
             <p>© 2021-2025 Amazon.com, Inc. ou suas afiliadas </p>
             <p> Amazon Serviços de Varejo do Brasil Ltda. | CNPJ 15.436.940/0001-03 </p>
-            <p> Av. Juscelino Kubitschek, 2041, Torre E, 18° andar - São Paulo CEP: 04543-011| <a href="">Fale conosco</a>| ajuda-amazon@amazon.com.br</p>
-            <p>Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express), cartões de débito (Visa e Elo), Boleto e Pix.</p>
+            <p> Av. Juscelino Kubitschek, 2041, Torre E, 18° andar - São Paulo CEP: 04543-011| <a href="">Fale
+                    conosco</a>| ajuda-amazon@amazon.com.br</p>
+            <p>Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express), cartões de
+                débito (Visa e Elo), Boleto e Pix.</p>
         </section>
     </footer>
 </body>
