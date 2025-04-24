@@ -68,9 +68,9 @@ nav {
 
 
     &>*:hover:not(ul, form) {
-            outline: auto;
-        }
-    
+        outline: auto;
+    }
+
 
     & a {
         color: white;
@@ -93,7 +93,7 @@ nav {
             outline: auto;
         }
 
-       
+
     }
 }
 
@@ -114,7 +114,7 @@ form {
 /* -------------------------- IDS -------------------------- */
 
 #logo {
-    width: 100px;
+    width: 120px;
 }
 
 #barra-pesquisa {
@@ -123,7 +123,7 @@ form {
     border-radius: 4px;
     padding: 0;
     margin: 0;
- 
+
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -151,8 +151,36 @@ form {
     color: white;
 }
 
+#nav-categorias {
+    visibility: hidden;
+    position: fixed;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    min-width: fit-content;
+
+    background-color: white;
+    z-index: 2;
+    overflow-y: hidden;
+
+    & ul {
+        flex-direction: column;
+        width: fit-content;
+        right: 0;
+    }
+
+
+
+    & a {
+        color: black;
+        padding: 0;
+    }
+}
+
 #hero {
-    margin-bottom: -200px;
+    margin: 0 auto;
+    overflow: visible;
+
 }
 
 #cards {
@@ -170,7 +198,6 @@ form {
 
 #categorias {
 
-    border: 1px solid red;
     padding: 8px;
     margin: 8px;
     background-color: white;
@@ -214,16 +241,21 @@ form {
 
 /* -------------------------- CLASS -------------------------- */
 
+.material-symbols-outlined {
+    font-size: 1rem;
+    align-self: flex-end;
+}
+
 .card {
     display: flex;
     flex-direction: column;
-    justify-content:flex-end;
+    justify-content: flex-end;
     max-width: 20vw;
     background-color: white;
     padding: 8px;
-    gap:8px;
+    gap: 8px;
 
-    &>h2{
+    &>h2 {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -231,13 +263,22 @@ form {
 }
 
 .menu-item {
-    padding:  8px;
+    padding: 8px;
     display: flex;
     flex-direction: row;
 
-justify-content: baseline;
-    &>* {
-        border: 1px solid red;
+    justify-content: baseline;
 
-    }
+}
+
+
+.heroInterior {
+    position: relative;
+    display: inline-block;
+    right: 50%;
+}
+
+.imgHero {
+    position: relative;
+    right: -50%;
 }

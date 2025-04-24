@@ -16,11 +16,14 @@
 <body>
     <header>
         <nav id="nav-primaria">
-        <figure style="padding: 12px 8px auto 8px; margin: 0;"><img style="padding: 12px 8px auto 8px;" id="logo" src="src/Amazon_logo.svg" alt="Amazon" /></figure>
+            <figure style="margin: 12px 8px auto 8px; ">
+                <img id="logo" src="src/Amazon_logo.svg" alt="Amazon" />
+            </figure>
 
             <div class="menu-item">
                 <span class="material-symbols-outlined">location_on</span>
-                <div><a href="" style="color: gainsboro; font-size: 0.7rem;">Entrega será feita em São Paulo</a><br>
+                <div><a href="" style="color: gainsboro; font-size: 0.7rem; text-wrap: nowrap;">A entrega será feita em
+                        São Paulo </a><br>
                     <a href="">Atualizar CEP</a>
                 </div>
             </div>
@@ -40,15 +43,16 @@
             </form>
 
             <div class="menu-item">
-                <a href="">Olá, faça seu login<br>Contas e Listas</a>
+                <a href=""><small>Olá, faça seu login</small><br><strong>Contas e Listas</strong></a>
                 <span class="material-symbols-outlined">arrow_drop_down</span>
             </div>
 
             <div class="menu-item">
-                <a href="">Devoluções <br> e Pedidos</a>
+                <a href=""><small>Devoluções</small> <br> e <strong>Pedidos</strong></a>
             </div>
             <div class="menu-item">
-                <a href=""><span class="material-symbols-outlined">shopping_cart</span>Carrinho</a>
+                <a href="" style="align-self: flex-end;"><span
+                        class="material-symbols-outlined">shopping_cart</span>Carrinho</a>
             </div>
 
 
@@ -56,22 +60,82 @@
         </nav>
         <nav id="nav-secundaria">
             <ul>
-                <li><span class="material-symbols-outlined">
+                <li><button onclick="mostrarMenu()" id="botaoTodos"><span class="material-symbols-outlined">
                         menu
-                    </span>Todos</li>
+                    </span>Todos</button></li>
                 <li><a href="">Venda na Amazon</a></li>
                 <li><a href="">Mais Vendidos</a></li>
                 <li><a href="">Ofertas do Dia</a></li>
-                <li><a href="">Prime <span class="material-symbols-outlined">arrow_drop_down</span></a></li>
+                <li><a href="" id="botaoPrime">Prime <span class="material-symbols-outlined">arrow_drop_down</span></a></li>
                 <li><a href="">Livros</a></li>
                 <li><a href="">Música</a></li>
             </ul>
             <span class="menu-item">O App Day começa em</span>
         </nav>
+
+
+        <nav id="nav-categorias">
+            <p><span class="material-symbols-outlined">account_circle</span>Olá, faça seu login</p>
+            <ul>
+                <li>Destaques</li>
+                <ul>
+                    <li><a href="">Mais Vendidos</a></li>
+                    <li><a href="">Novidades na Amazon</a></li>
+                    <li><a href="">Produtos em alta</a></li>
+                </ul>
+                <hr>
+                <li>Conteúdo digital e dispositivos</li>
+                <ul>
+                    <li><a href="">Amazon Fire TV</a></li>
+                    <li><a href="">Amazon Music</a></li>
+                    <li><a href="">Prime Video</a></li>
+                    <li><a href="">Aplicativos Amazon</a></li>
+                    <li><a href="">Dispositivos Kindle e eBooks</a></li>
+                    <li><a href="">Echo e Alexa</a></li>
+                    <li><a href="">Audiolivros Audible</a></li>
+                </ul>
+                            
+                <li>Comprar por categoria</li>
+                <ul>
+                    <li><a href="">Alimentos e Bebidas</a></li>
+                    <li><a href="">Automotivo</a></li>
+                    <li><a href="">Bebês</a></li>
+                    <li><a href="">Beleza e Cuidados Pessoais</a></li>
+                    <li><a href="">Ver tudo</a></li>
+                </ul>
+              
+                <li>PROGRAMAS E RECURSOS</li>
+                <ul>
+                    <li><a href="">Amazon Prime</a></li>
+                    <li><a href="">Compras Internacionais</a></li>
+                    <li><a href="">Dicas de Presentes</a></li>
+                    <li><a href="">Venda na Amazon</a></li>
+                    <li><a href="">Ver tudo</a></li>
+                </ul>
+                <li>AJUDA E CONFIGURAÇÕES</li>
+                <ul>
+                    <li><a href="">Sua conta</a></li>
+                    <li><a href="">Ajuda</a></li>
+                    <li><a href="">Faça seu login</a></li>
+                </ul>
+            </ul>
+            
+
+
+
+
+
+
+
+
+
+        </nav>
     </header>
     <main>
         <section id="hero">
-            <img src="src/hero/01.jpg" alt="">
+            <div class="heroInterior">
+                <img class="imgHero" src="src/hero/01.jpg" alt="">
+            </div>
         </section>
 
         <section id="cards">
@@ -228,6 +292,9 @@
                 débito (Visa e Elo), Boleto e Pix.</p>
         </section>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
