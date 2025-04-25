@@ -1,6 +1,23 @@
-const navCategoria = document.getElementById("nav-categorias");
-const bPrime = document.getElementById("#botaoPrime");
+const navCategoria = document.getElementById("navCategorias");
+const bPrime = document.getElementById("botaoPrime");
+const popPrime = document.getElementById("popPrime");
+
+const bContas = document.getElementById("botaoContas");
+const navContas = document.getElementById("navContas")
+
 let isOnNavC = false;
+
+function posicionarPop() {
+    let xPrime = bPrime.offsetLeft;
+    popPrime.style.left = xPrime + "px";
+
+    let xContas = bContas.offsetLeft;
+    navContas.style.left = xContas + "px";
+    let yContas = bContas.offsetTop + bContas.offsetHeight;
+    navContas.style.top = yContas + "px";
+}
+
+posicionarPop();
 
 function mostrarMenu() {
     navCategoria.style.visibility = 'visible';
@@ -21,8 +38,18 @@ window.onclick = function (event) {
     }
 }
 
-bPrime.onclick = function (event){
-    console.log("Prime")
-    bPrime.style.color = "red";
-}
+bPrime.addEventListener("mouseenter", e => {
+    popPrime.style.visibility = 'visible';
+})
 
+bPrime.addEventListener("mouseout", e => {
+    popPrime.style.visibility = 'hidden';
+})
+
+bContas.addEventListener("mouseenter", e => {
+    navContas.style.visibility = 'visible';
+})
+
+bContas.addEventListener("mouseout", e => {
+    navContas.style.visibility = 'hidden';
+})

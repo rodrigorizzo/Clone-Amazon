@@ -60,7 +60,6 @@ select {
 }
 
 nav {
-    min-width: 1000px;
     display: flex;
 
     font-size: 0.9rem;
@@ -93,7 +92,17 @@ nav {
             outline: auto;
         }
 
+        &:has(button) {
+            padding: 0;
+        }
 
+        & button {
+            height: 100%;
+            padding: 8px;
+            border: 0;
+            background: none;
+            color: white;
+        }
     }
 }
 
@@ -141,40 +150,46 @@ form {
 }
 
 #nav-primaria {
+    min-width: 1000px;
     background-color: var(--cor-bg-menu);
     color: white;
     margin: 0;
 }
 
 #nav-secundaria {
+    min-width: 1000px;
     background-color: var(--cor-bg-menu-2);
     color: white;
 }
 
-#nav-categorias {
-    visibility: hidden;
+
+#navContas {
+    position: absolute;
+    
+    width: 300px;
+
+    & div {
+        width: fit-content;
+    }
+}
+
+#navCategorias {
     position: fixed;
-    flex-direction: column;
+
     left: 0;
     top: 0;
-    min-width: fit-content;
-
-    background-color: white;
-    z-index: 2;
     overflow-y: hidden;
 
-    & ul {
-        flex-direction: column;
-        width: fit-content;
-        right: 0;
-    }
+}
 
+#popPrime {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    width: 300px;
 
-
-    & a {
-        color: black;
-        padding: 0;
-    }
+    background-color: white;
+    padding: 8px;
 }
 
 #hero {
@@ -216,6 +231,24 @@ form {
 
 }
 
+#recomendacoes {
+    text-align: center;
+    background-color: white;
+    padding: 8px;
+}
+
+#voltar-inicio {
+    background-color: #37475a;
+
+    &:hover {
+        background-color: #57708f;
+
+        &>a {
+            text-decoration: none;
+        }
+    }
+}
+
 #footer-links {
     display: flex;
     justify-content: space-between;
@@ -241,9 +274,9 @@ form {
 
 /* -------------------------- CLASS -------------------------- */
 
+
 .material-symbols-outlined {
     font-size: 1rem;
-    align-self: flex-end;
 }
 
 .card {
@@ -259,6 +292,19 @@ form {
         height: 100%;
         padding: 0;
         margin: 0;
+    }
+}
+
+.botaoLogin {
+    display: inline-block;
+    background-color: #ffd814;
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+
+    &:hover {
+        background-color: #f1c900;
     }
 }
 
@@ -281,4 +327,36 @@ form {
 .imgHero {
     position: relative;
     right: -50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.menuEscondido {
+    visibility: hidden;
+    padding: 8px;
+    flex-direction: column;
+    background-color: white;
+    z-index: 2;
+
+
+    & a {
+        color: black;
+    }
+
+    & li {
+        padding: 4px 0;
+        font-size: 0.8rem;
+    }
+
+
+    & ul {
+        flex-direction: column;
+        right: 0;
+    }
+
+
+
 }

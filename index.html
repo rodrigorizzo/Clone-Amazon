@@ -42,7 +42,7 @@
                 </button>
             </form>
 
-            <div class="menu-item">
+            <div id="botaoContas" class="menu-item">
                 <a href=""><small>Olá, faça seu login</small><br><strong>Contas e Listas</strong></a>
                 <span class="material-symbols-outlined">arrow_drop_down</span>
             </div>
@@ -61,20 +61,57 @@
         <nav id="nav-secundaria">
             <ul>
                 <li><button onclick="mostrarMenu()" id="botaoTodos"><span class="material-symbols-outlined">
-                        menu
-                    </span>Todos</button></li>
+                            menu
+                        </span>Todos</button></li>
                 <li><a href="">Venda na Amazon</a></li>
                 <li><a href="">Mais Vendidos</a></li>
                 <li><a href="">Ofertas do Dia</a></li>
-                <li><a href="" id="botaoPrime">Prime <span class="material-symbols-outlined">arrow_drop_down</span></a></li>
+                <li id="botaoPrime"><a href="">Prime <span class="material-symbols-outlined">arrow_drop_down</span> </a>
+                </li>
                 <li><a href="">Livros</a></li>
                 <li><a href="">Música</a></li>
             </ul>
             <span class="menu-item">O App Day começa em</span>
         </nav>
 
+        <!-- Início da navegação escondida do header -->
 
-        <nav id="nav-categorias">
+        <nav id="navContas" class="menuEscondido">
+            <div> <a href="" class="botaoLogin">Faça seu login</a>
+                <small>Cliente novo? <a href="">Comece aqui.</a></small>
+            </div>
+            <div class="row">
+                <div>
+                    <h2>Suas listas</h2>
+                    <ul>
+                        <li><a href="">Criar uma Lista de desejos</a></li>
+                        <li><a href="">Lista do Bebê</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Sua conta</h2>
+                    <ul>
+                        <li><a href="">Sua conta</a></li>
+                        <li><a href="">Seus pedidos</a></li>
+                        <li><a href="">Sua Lista de desejos</a></li>
+                        <li><a href="">Recomendados para você</a></li>
+                        <li><a href="">Programe e Poupe</a></li>
+                        <li><a href="">Sua assinatura Prime</a></li>
+                        <li><a href="">Inscrições e assinaturas</a></li>
+                        <li><a href="">Gerencie seu conteúdo e dispositivos</a></li>
+                        <li><a href="">Seu Prime Video</a></li>
+                        <li><a href="">Seu Kindle Unlimited</a></li>
+                        <li><a href="">Seu Amazon Photos</a></li>
+                        <li><a href="">Seus aplicativos e dispositivos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <div id="popPrime"><img src="src/destaque/primePop.jpg" alt=""></div>
+
+        <nav id="navCategorias" class="menuEscondido">
             <p><span class="material-symbols-outlined">account_circle</span>Olá, faça seu login</p>
             <ul>
                 <li>Destaques</li>
@@ -94,7 +131,7 @@
                     <li><a href="">Echo e Alexa</a></li>
                     <li><a href="">Audiolivros Audible</a></li>
                 </ul>
-                            
+
                 <li>Comprar por categoria</li>
                 <ul>
                     <li><a href="">Alimentos e Bebidas</a></li>
@@ -103,7 +140,7 @@
                     <li><a href="">Beleza e Cuidados Pessoais</a></li>
                     <li><a href="">Ver tudo</a></li>
                 </ul>
-              
+
                 <li>PROGRAMAS E RECURSOS</li>
                 <ul>
                     <li><a href="">Amazon Prime</a></li>
@@ -119,7 +156,7 @@
                     <li><a href="">Faça seu login</a></li>
                 </ul>
             </ul>
-            
+
 
 
 
@@ -130,6 +167,8 @@
 
 
         </nav>
+
+        <!-- Fim da navegação escondida do header -->
     </header>
     <main>
         <section id="hero">
@@ -227,15 +266,17 @@
 
         <section id="recomendacoes">
             <h2>Veja recomendações personalizadas </h2>
-            <a>Faça seu login</a>
+            <a href="" class="botaoLogin">Faça seu login</a>
             <p>Cliente novo? <a href="">Comece aqui.</a></p>
         </section>
 
     </main>
     <footer>
 
-        <section id="voltar-inicio">
-            <button>Voltar ao início</button>
+        <section id="voltar-inicio" style="padding: 0;">
+            <a href="#">
+                <p style="margin: 0; padding: 16px 8px;">Voltar ao início</p>
+            </a>
         </section>
 
         <section id="footer-links">
