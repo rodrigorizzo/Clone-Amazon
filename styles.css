@@ -14,10 +14,13 @@
 }
 
 /* -------------------------- TAGS -------------------------- */
+
 body {
     font-family: 'Amazon Ember', sans-serif;
     margin: 0;
-}
+
+/*     overflow-y: hidden;
+ */}
 
 header {
     margin: 0;
@@ -175,10 +178,14 @@ form {
 
 #navCategorias {
     position: fixed;
-
     left: 0;
     top: 0;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+
+    & li {
+        padding: 8px;
+    }
 
 }
 
@@ -193,10 +200,23 @@ form {
 }
 
 #hero {
-    margin: 0 auto;
-    overflow: visible;
+/*     margin: 0 auto;
+ */    
+}
+
+
+#heroImgs {
+    display: flex;
+    overflow-x: hidden;
 
 }
+
+.imgHero {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid black;
+}
+
 
 #cards {
     display: flex;
@@ -312,22 +332,12 @@ form {
     padding: 8px;
     display: flex;
     flex-direction: row;
-
     justify-content: baseline;
 
 }
 
 
-.heroInterior {
-    position: relative;
-    display: inline-block;
-    right: 50%;
-}
 
-.imgHero {
-    position: relative;
-    right: -50%;
-}
 
 .row {
     display: flex;
