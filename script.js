@@ -9,6 +9,9 @@ const popPrime = document.getElementById("popPrime");
 const bContas = document.getElementById("botaoContas");
 const navContas = document.getElementById("navContas");
 
+const bCep = document.getElementById("bCep");
+const cepPopUp = document.getElementById("cepPopUp");
+
 const heroImgs = document.querySelector("#heroImgs");
 const xScrollHero = document.querySelector(".imgHero").offsetWidth;
 
@@ -21,6 +24,9 @@ adicionarListener(bPrime, popPrime);
 
 posicionarPop(bContas, navContas);
 adicionarListener(bContas, navContas);
+
+posicionarPop(bCep, cepPopUp);
+adicionarListener(bCep, cepPopUp);
 
 /* ----------------------------------- Declaração das funções ----------------------------------- */
 

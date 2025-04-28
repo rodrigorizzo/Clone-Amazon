@@ -20,7 +20,7 @@
                 <img id="logo" src="src/Amazon_logo.svg" alt="Amazon" />
             </figure>
 
-            <div class="menu-item">
+            <div class="menu-item" id="bCep">
                 <span class="material-symbols-outlined">location_on</span>
                 <div><a href="" style="color: gainsboro; font-size: 0.7rem; text-wrap: nowrap;">A entrega será feita em
                         São Paulo </a><br>
@@ -110,6 +110,19 @@
         </nav>
 
         <div id="popPrime"><img src="src/destaque/primePop.jpg" alt=""></div>
+
+        <section id="cepPopUp">
+            <h2>Escolha sua localização</h2>
+            <p>As opções e velocidade de entrega podem variar de acordo com a região </p>
+            <a href="" class="botaoLogin">Faça login</a>
+            <p>ou insira um CEP do Brasil</p>
+            <form action="">
+                <input type="number" size="5" maxlength="5"> - 
+                <input type="number" size="3" maxlength="3">
+                <input type="submit" value="confirmar">
+            </form>
+            
+        </section>
 
         <nav id="navCategorias" class="menuEscondido">
             <p><span class="material-symbols-outlined">account_circle</span>Olá, faça seu login</p>

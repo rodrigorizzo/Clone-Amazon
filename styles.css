@@ -199,6 +199,13 @@ form {
     padding: 8px;
 }
 
+#cepPopUp {
+    position: absolute;
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+}
+
 #hero {
 /*     margin: 0 auto;
  */    
