@@ -40,8 +40,15 @@ function posicionarPop(acionador, elemento) {
 function adicionarListener(acionador, elemento) {
     acionador.addEventListener("mouseover", e => {
         elemento.style.visibility = 'visible';
+        posicionarPop(acionador, elemento);
     })
     acionador.addEventListener("mouseout", e => {
+        elemento.style.visibility = 'hidden';
+    })
+    elemento.addEventListener("mouseover", e => {
+        elemento.style.visibility = 'visible';
+    })
+    elemento.addEventListener("mouseout", e => {
         elemento.style.visibility = 'hidden';
     })
 }
