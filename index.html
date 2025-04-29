@@ -16,71 +16,125 @@
 <body>
     <header>
         <nav id="nav-primaria">
-            <figure style="margin: 12px 8px auto 8px; ">
+            <figure>
                 <img id="logo" src="src/Amazon_logo.svg" alt="Amazon" />
             </figure>
 
-            <div class="menu-item" id="bCep">
-                <span class="material-symbols-outlined">location_on</span>
-                <div><a href="" style="color: gainsboro; font-size: 0.7rem; text-wrap: nowrap;">A entrega será feita em
-                        São Paulo </a><br>
-                    <a href="">Atualizar CEP</a>
+            <div id="bCep">
+                <div>
+                    <span class="material-symbols-outlined">location_on</span> &nbsp;
+                    <div><a href="" style="color: gainsboro; font-size: 0.7rem; text-wrap: nowrap;">A entrega será feita
+                            em
+                            São Paulo </a><br>
+                        <a href="">Atualizar CEP</a>
+                    </div>
                 </div>
             </div>
 
             <form action="" id="barra-pesquisa">
-                <select name="" id="">
-                    <option value="0">Todos</option>
-                    <option value="1">Alexa skills</option>
-                    <option value="2">Alimentos e Bebidas</option>
-                    <option value="3">Amazon Quase Novo</option>
+                <select aria-describedby="searchDropdownDescription" title="Pesquisar em">
+                    <option selected="selected" value="search-alias=aps">Todos</option>
+                    <option value="search-alias=alexa-skills">Alexa Skills</option>
+                    <option value="search-alias=grocery">Alimentos e Bebidas</option>
+                    <option value="search-alias=warehouse-deals">Amazon Quase Novo</option>
+                    <option value="search-alias=mobile-apps">Apps e Jogos</option>
+                    <option value="search-alias=audible">Audiolivros Audible</option>
+                    <option value="search-alias=automotive">Automotivo</option>
+                    <option value="search-alias=baby">Bebês</option>
+                    <option value="search-alias=beauty">Beleza</option>
+                    <option value="search-alias=luxury-beauty">Beleza de Luxo</option>
+                    <option value="search-alias=fashion-luggage">Bolsas, Malas e Mochilas</option>
+                    <option value="search-alias=toys">Brinquedos e Jogos</option>
+                    <option value="search-alias=home">Casa</option>
+                    <option value="search-alias=popular">CD e Vinil</option>
+                    <option value="search-alias=computers">Computadores e Informática</option>
+                    <option value="search-alias=kitchen">Cozinha</option>
+                    <option value="search-alias=amazon-devices">Dispositivos Amazon</option>
+                    <option value="search-alias=dvd">DVD e Blu-Ray</option>
+                    <option value="search-alias=appliances">Eletrodomésticos</option>
+                    <option value="search-alias=electronics">Eletrônicos</option>
+                    <option value="search-alias=sporting">Esportes e Aventura</option>
+                    <option value="search-alias=hi">Ferramentas e Materiais de Construção</option>
+                    <option value="search-alias=videogames">Games</option>
+                    <option value="search-alias=mi">Instrumentos Musicais</option>
+                    <option value="search-alias=garden">Jardim e Piscina</option>
+                    <option value="search-alias=stripbooks">Livros</option>
+                    <option value="search-alias=digital-text">Loja Kindle</option>
+                    <option value="search-alias=office-products">Material para Escritório e Papelaria</option>
+                    <option value="search-alias=furniture">Móveis e Decoração</option>
+                    <option value="search-alias=pets">Pet Shop</option>
+                    <option value="search-alias=instant-video">Prime Video</option>
+                    <option value="search-alias=industrial">Produtos Industriais e Científicos</option>
+                    <option value="search-alias=specialty-aps-sns">Programe e Poupe</option>
+                    <option value="search-alias=fashion">Roupas, Calçados e Joias</option>
+                    <option value="search-alias=fashion-womens">Roupas, sapatos e joias femininas</option>
+                    <option value="search-alias=fashion-mens">Roupas, sapatos e joias masculinas</option>
+                    <option value="search-alias=fashion-girls">Roupas, sapatos e joias para meninas</option>
+                    <option value="search-alias=fashion-boys">Roupas, sapatos e joias para meninos</option>
+                    <option value="search-alias=fashion-baby">Roupas, sapatos e joias para bebês</option>
+                    <option value="search-alias=hpc">Saúde e Cuidados Pessoais</option>
                 </select>
-                <input type="text" placeholder="Pesquisar na Amazon">
-                <button id="botaoBusca"><span class="material-symbols-outlined">
+                <input type="text" placeholder="Pesquisar na Amazon.com.br">
+                <button id="botaoBusca"><span class="material-symbols-outlined grande">
                         search
                     </span>
                 </button>
             </form>
 
-            <div id="botaoContas" class="menu-item">
-                <a href=""><small>Olá, faça seu login</small><br><strong>Contas e Listas</strong></a>
-                <span class="material-symbols-outlined">arrow_drop_down</span>
+            <div id="botaoContas">
+                <div> <a href=""><small>Olá, faça seu login</small><br><strong>Contas e Listas</strong></a>
+                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                </div>
             </div>
 
-            <div class="menu-item">
-                <a href=""><small>Devoluções</small> <br> e <strong>Pedidos</strong></a>
-            </div>
-            <div class="menu-item">
-                <a href="" style="align-self: flex-end;"><span
-                        class="material-symbols-outlined">shopping_cart</span>Carrinho</a>
+            <div>
+                <div>
+                    <a href=""><small>Devoluções</small> <br> e <strong>Pedidos</strong></a>
+                </div>
             </div>
 
-
-
+            <div>
+                <div><a href="" class=""><span class="material-symbols-outlined"
+                            style="font-size: 1.4em;">shopping_cart</span><strong
+                            style="font-size: 1rem;">Carrinho</strong></a>
+                </div>
+            </div>
         </nav>
+
         <nav id="nav-secundaria">
             <ul>
-                <li><button onclick="mostrarMenu()" id="botaoTodos"><span class="material-symbols-outlined">
-                            menu
-                        </span>Todos</button></li>
+                <li>
+                    <button onclick="mostrarMenu()" id="botaoTodos" class="itemIcone">
+                        <span class="material-symbols-outlined">menu</span> &nbsp;
+                        <span>Todos</span>
+                    </button>
+                </li>
                 <li><a href="">Venda na Amazon</a></li>
                 <li><a href="">Mais Vendidos</a></li>
                 <li><a href="">Ofertas do Dia</a></li>
-                <li id="botaoPrime"><a href="">Prime <span class="material-symbols-outlined">arrow_drop_down</span> </a>
+                <li id="botaoPrime">
+                    <a href="" class="itemIcone">
+                        <span>Prime</span>
+                        <span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a>
                 </li>
                 <li><a href="">Livros</a></li>
                 <li><a href="">Música</a></li>
             </ul>
-            <span class="menu-item">O App Day começa em</span>
+            <span class="menu-item" style="margin: auto 0; padding: 8px">O App Day começa em</span>
         </nav>
 
         <!-- Início da navegação escondida do header -->
 
         <nav id="navContas" class="menuEscondido">
-            <div> <a href="" class="botaoLogin">Faça seu login</a>
-                <small>Cliente novo? <a href="">Comece aqui.</a></small>
+            <div style="width: 100%; text-align: center;">
+                <p> <a href="" class="botaoLogin">Faça seu login</a></p>
+                <p><small>Cliente novo? <a href="">Comece aqui.</a></small>
+                </p>
+                <hr>
             </div>
-            <div class="row">
+
+            <div class="submenu">
                 <div>
                     <h2>Suas listas</h2>
                     <ul>
@@ -88,6 +142,7 @@
                         <li><a href="">Lista do Bebê</a></li>
                     </ul>
                 </div>
+                <hr>
                 <div>
                     <h2>Sua conta</h2>
                     <ul>
@@ -109,23 +164,23 @@
 
         </nav>
 
-        <div id="popPrime"><img src="src/destaque/primePop.jpg" alt=""></div>
+        <div id="popPrime"><a href=""><img src="src/destaque/primePop.jpg" alt=""></a></div>
 
-        <section id="cepPopUp">
+        <section id="cepPopUp" class="menuEscondido">
             <h2>Escolha sua localização</h2>
             <p>As opções e velocidade de entrega podem variar de acordo com a região </p>
-            <a href="" class="botaoLogin">Faça login</a>
+           <a href="" class="botaoLogin" >Faça login</a>
             <p>ou insira um CEP do Brasil</p>
             <form action="">
-                <input type="number" maxlength="4" size="4"> -
-                <input type="number" size="3" maxlength="3">
+                <input type="number" maxlength="4" size="4" placeholder="00000"> -
+                <input type="number" size="3" maxlength="3" placeholder="000">
                 <input type="submit" value="confirmar">
             </form>
 
         </section>
 
         <nav id="navCategorias" class="menuEscondido">
-            <p><span class="material-symbols-outlined">account_circle</span>Olá, faça seu login</p>
+            <p><span class="material-symbols-outlined">account_circle</span> &nbsp;Olá, faça seu login</p>
             <ul>
                 <li>Destaques</li>
                 <ul>
@@ -186,10 +241,19 @@
     <main>
         <section id="hero">
             <div class="botoesHero">
-                <button onclick="slideMoverEsq()" class="botaoSlide"> < </button>
-                <button onclick="slideMoverDir()" class="botaoSlide"> > </button>
+                <button onclick="slideMoverEsq()" class="botaoSlide">
+                    <span class="material-symbols-outlined" 
+                    style="font-size: 1.5em;">
+                        chevron_left
+                    </span> 
+                </button>
+                <button onclick="slideMoverDir()" class="botaoSlide">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1.5em;">
+                        chevron_forward
+                    </span> 
+                </button>
             </div>
-
             <div id="heroImgs">
                 <img class="imgHero" src="src/hero/01.jpg" alt="">
                 <img class="imgHero" src="src/hero/02.jpg" alt="">

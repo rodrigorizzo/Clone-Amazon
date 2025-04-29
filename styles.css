@@ -1,9 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/amazon-ember');
 
-
 :root {
-    /*     --cor: #232f3e;
-    --cor2: #0f1111; */
+    /* Cores mais utilizadas */
     --cor-bg-menu: #131921;
     --cor-bg-menu-2: #232f3e;
     --cor-bg-footer: #131A22;
@@ -18,9 +16,6 @@
 body {
     font-family: 'Amazon Ember', sans-serif;
     margin: 0;
-
-    /*     overflow-y: hidden;
- */
 }
 
 header {
@@ -52,28 +47,15 @@ footer {
     }
 }
 
-img {
-    width: 100%;
-}
-
-select {
-    font-family: 'Amazon Ember', sans-serif;
-    background-color: var(--cinza);
-    padding: 8px;
-    max-width: 90px;
-}
-
 nav {
     display: flex;
-
-    font-size: 0.9rem;
     justify-content: space-between;
 
+    font-size: 0.9rem;
 
-    &>*:hover:not(ul, form) {
+    &>*:hover:not(ul, form, h2) {
         outline: auto;
     }
-
 
     & a {
         color: white;
@@ -114,66 +96,152 @@ h2 {
     font-size: 21px;
 }
 
-input {
-    padding: 8px;
+a {
+    color: #2162a1;
+    text-decoration: none;
+
+/*     &:hover {
+        color: #f08804;
+    } */
 }
 
-
-form {
+/* form {
     height: fit-content;
     align-self: center;
+} */
+
+select {
+    font-family: 'Amazon Ember', sans-serif;
+    background-color: var(--cinza);
+    color: rgb(77, 77, 77);
+    padding: 8px;
+    max-width: 90px;
+}
+
+figure {
+    margin: 0;
+}
+
+hr {
+    border: 1px solid rgb(241, 241, 241);
 }
 
 /* -------------------------- IDS -------------------------- */
 
-#logo {
-    width: 120px;
-}
-
-#barra-pesquisa {
-    background-color: white;
-    border: 0;
-    border-radius: 4px;
-    padding: 0;
-    margin: 0;
-
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-
-    &>* {
-        border: 0;
-    }
-
-}
-
-#botaoBusca {
-    background-color: #FABC6B;
-
-}
+/* Início navs e menus do header */
 
 #nav-primaria {
     min-width: 1000px;
+    min-height: 60px;
     background-color: var(--cor-bg-menu);
     color: white;
-    margin: 0;
+
+    &>* {
+        display: flex;
+    }
+
+    &>div {
+        padding: 8px;
+
+
+        &>div {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    & form {
+        background-color: white;
+        border: 0;
+        border-radius: 4px;
+        margin: 8px 0;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+        min-width: 40%;
+
+        &>* {
+            border: 0;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 100%;
+            font-size: 0.9rem;
+            font-weight: 400;
+
+            &:hover {
+                outline: none;
+            }
+
+        }
+
+        button {
+            background-color: #FABC6B;
+
+        }
+
+    }
 }
+
+
+
+
 
 #nav-secundaria {
     min-width: 1000px;
     background-color: var(--cor-bg-menu-2);
     color: white;
+
+    & li:not(>button) {
+        padding: 8px;
+    }
+
+    & .itemIcone {
+        display: flex;
+        align-items: center;
+
+        &>* {
+            pointer-events: none;
+        }
+    }
+
 }
 
 
 #navContas {
     position: absolute;
-
-    width: 300px;
+    width: 400px;
+    border-radius: 2px;
 
     & div {
         width: fit-content;
+
+        &:hover {
+            outline: none;
+        }
+
+        &>* {
+            margin: 4px;
+        }
+    }
+
+    h2 {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    & .submenu {
+        display: flex;
+        flex-direction: row;
+
+        & div {
+            width: 100%;
+            padding: 8px;
+        }
     }
 }
 
@@ -183,9 +251,28 @@ form {
     top: 0;
     overflow-y: scroll;
     height: 100vh;
+    padding: 0;
+
+    & p {
+        background-color: var(--cor-bg-menu-2);
+        color: white;
+        font-weight: 700;
+        font-size: large;
+        margin: 0;
+        padding: 16px;
+    }
 
     & li {
-        padding: 8px;
+        padding: 8px 16px 8px 32px;
+    }
+
+    &>ul>li {
+        font-weight: 700;
+        font-size: 1rem;
+
+        &:hover {
+            outline: none;
+        }
     }
 
 }
@@ -194,38 +281,87 @@ form {
     visibility: hidden;
     position: absolute;
     z-index: 2;
-    width: 300px;
-
     background-color: white;
     padding: 8px;
+
+    &>img {
+        width: 300px;
+    }
 }
 
 #cepPopUp {
     position: absolute;
     background-color: white;
+
+    width: 300px;
     padding: 8px;
-    text-align: center;
+    z-index: 2;
+
+    &>*{
+        margin: 4px 8px 0 8px;
+     }
+
+
+    & h2 {
+        font-size: 1rem;
+
+
+    }
+
+    & p {
+     font-size: 0.8rem;
+     color: gray;
+    }
+
+    & form{
+        display: flex;
+        align-items:center ;
+        gap: 4px;
+    }
+    & input {
+        padding: 8px 4px;
+        width:80px;
+        border-radius: 4px;
+        border: 1px solid gray;
+    }
+
+    & input:nth-child(2) {
+        width: 40px;
+    }
+}
+
+/* Fim navs e menus do header */
+
+
+#logo {
+    width: 100px;
+    padding-top: 8px;
+    margin: 8px
 }
 
 #hero {
+    position: absolute;
+
+    & #heroImgs {
+        display: flex;
+        overflow-x: hidden;
+    }
+
+    & .imgHero {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+}
+
+
+#cards {
     position: relative;
-}
-
-
-#heroImgs {
-    display: flex;
-    overflow-x: hidden;
+    margin-bottom: 50vh;
+    z-index: 1;
+    top: 40vh;
 
 }
-
-
-
-.imgHero {
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid black;
-}
-
 
 #cards {
     display: flex;
@@ -306,6 +442,13 @@ form {
 
 .material-symbols-outlined {
     font-size: 1rem;
+
+}
+
+
+
+.grande {
+    font-size: 1.5rem;
 }
 
 .card {
@@ -316,6 +459,9 @@ form {
     background-color: white;
     padding: 8px;
     gap: 8px;
+
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 3px;
 
     &>h2 {
         height: 100%;
@@ -337,21 +483,7 @@ form {
     }
 }
 
-.menu-item {
-    padding: 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: baseline;
 
-}
-
-
-
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
 
 .menuEscondido {
     visibility: hidden;
@@ -385,14 +517,14 @@ form {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 50%;
 }
 
 .botaoSlide {
     background-color: transparent;
     border: 0;
     height: 100%;
-    width: 32px;
+    min-width: 32px;
     font-size: 36px;
 
     &:hover {

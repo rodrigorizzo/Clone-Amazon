@@ -28,11 +28,18 @@ adicionarListener(bContas, navContas);
 posicionarPop(bCep, cepPopUp);
 adicionarListener(bCep, cepPopUp);
 
+
+
 /* ----------------------------------- Declaração das funções ----------------------------------- */
 
 function posicionarPop(acionador, elemento) {
-    let xContas = acionador.offsetLeft;
-    elemento.style.left = xContas + "px";
+    console.log(`$(acionador.offsetLeft + elemento.) < $(window.innerWidth)`)
+    if (acionador.offsetLeft + elemento.offsetWidth < window.innerWidth) {
+        let xContas = acionador.offsetLeft;
+        elemento.style.left = xContas + "px";
+    }else{
+        elemento.style.right = 0;
+    }
     let yContas = acionador.offsetTop + acionador.offsetHeight;
     elemento.style.top = yContas + "px";
 }
@@ -52,6 +59,13 @@ function adicionarListener(acionador, elemento) {
         elemento.style.visibility = 'hidden';
     })
 }
+
+
+/* function mostrarPop(elemento, isOn){
+    elemento.style.visibility = 'visible';
+    isOn = true;
+    body.style.overflowY = "hidden"
+} */
 
 function esconderMenu() {
     navCategoria.style.visibility = 'hidden';
