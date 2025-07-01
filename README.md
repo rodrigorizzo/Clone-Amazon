@@ -1,6 +1,9 @@
 # 📦 Amazon Clone (Projeto de Estudo)
 
-Este projeto é um **clone front-end da interface da Amazon.com.br**, desenvolvido para replicar fielmente o design e algumas das funcionalidades dinâmicas do site de e-commerce mais famoso do mundo. Construído com **HTML, CSS e JavaScript puros**, ele demonstra habilidades de desenvolvimento web para recriar layouts complexos e interativos.
+Este projeto é um **clone front-end da interface da Amazon.com.br**, desenvolvido para replicar o design e algumas das funcionalidades dinâmicas do site de e-commerce mais famoso do mundo. Construído com **HTML, CSS e JavaScript puros**, ele demonstra habilidades de desenvolvimento web para recriar layouts complexos e interativos.
+
+![image](https://github.com/user-attachments/assets/444fd872-5848-43b5-846f-9ea5536296a4)
+
 
 ## ✨ Funcionalidades
 
@@ -15,7 +18,7 @@ Este projeto é um **clone front-end da interface da Amazon.com.br**, desenvolvi
   * **Carrossel de Categorias:** Uma galeria de imagens rolável horizontalmente que permite navegar visualmente por diferentes categorias de produtos.
   * **Chamada para Ação de Login:** Uma seção destacada incentivando o login para recomendações personalizadas.
   * **Rodapé Detalhado:** Replica o rodapé completo da Amazon, com links para informações corporativas, vendas, pagamentos, ajuda e detalhes legais.
-  * **Design Fiel:** Esforço para replicar cores, tipografia (com a fonte **Amazon Ember**) e espaçamento do site original.
+  * **Design:** Esforço para replicar cores, tipografia (com a fonte **Amazon Ember**) e espaçamento do site original.
 
 ## 🚀 Tecnologias Utilizadas
 
