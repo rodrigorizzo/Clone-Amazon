@@ -12,8 +12,8 @@ const navContas = document.getElementById("navContas");
 const bCep = document.getElementById("bCep");
 const cepPopUp = document.getElementById("cepPopUp");
 
-const heroImgs = document.querySelector("#heroImgs");
-const xScrollHero = document.querySelector(".imgHero").offsetWidth;
+const heroImgs = document.querySelector("#heroImg");
+let heroImgId = 1;
 
 let isOnNavContas = false;
 
@@ -33,11 +33,11 @@ adicionarListener(bCep, cepPopUp);
 /* ----------------------------------- Declaração das funções ----------------------------------- */
 
 function posicionarPop(acionador, elemento) {
-    console.log(`$(acionador.offsetLeft + elemento.) < $(window.innerWidth)`)
-    if (acionador.offsetLeft + elemento.offsetWidth < window.innerWidth) {
+/*     console.log(`$(acionador.offsetLeft + elemento.) < $(window.innerWidth)`)
+ */    if (acionador.offsetLeft + elemento.offsetWidth < window.innerWidth) {
         let xContas = acionador.offsetLeft;
         elemento.style.left = xContas + "px";
-    }else{
+    } else {
         elemento.style.right = 0;
     }
     let yContas = acionador.offsetTop + acionador.offsetHeight;
@@ -83,15 +83,23 @@ window.onclick = function (event) {
 
 /* Funções associados onclick dos botões */
 
-function slideMoverEsq() {
-    let x = heroImgs.scrollLeft >= 10 ? -xScrollHero : xScrollHero * (heroImgs.childElementCount - 1);
-    heroImgs.scrollBy(x, 0)
+function slideAnterior() {
+    if (heroImgId != 1) { heroImgId--; }
+    else { heroImgId = 5 }
+    mostrarImagem();
+}
 
+function slideProximo() {
+    if (heroImgId != 5) { heroImgId++; }
+    else { heroImgId = 1 }
+
+    mostrarImagem();
 }
-function slideMoverDir() {
-    let x = heroImgs.scrollLeft < (xScrollHero * (heroImgs.childElementCount - 1) - 10) ? xScrollHero : -xScrollHero * (heroImgs.childElementCount - 1);
-    heroImgs.scrollBy(x, 0)
+
+function mostrarImagem() {
+    heroImg.setAttribute("src", `src/hero/0${heroImgId}.jpg`)
 }
+
 
 function mostrarMenu() {
     navCategoria.style.visibility = 'visible';
