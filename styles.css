@@ -100,6 +100,9 @@ a {
     color: #2162a1;
     text-decoration: none;
 
+    /*     &:hover {
+        color: #f08804;
+    } */
 }
 
 select {
@@ -290,9 +293,9 @@ hr {
     padding: 8px;
     z-index: 2;
 
-    &>* {
+    &>*{
         margin: 4px 8px 0 8px;
-    }
+     }
 
 
     & h2 {
@@ -302,19 +305,18 @@ hr {
     }
 
     & p {
-        font-size: 0.8rem;
-        color: gray;
+     font-size: 0.8rem;
+     color: gray;
     }
 
-    & form {
+    & form{
         display: flex;
-        align-items: center;
+        align-items:center ;
         gap: 4px;
     }
-
     & input {
         padding: 8px 4px;
-        width: 80px;
+        width:80px;
         border-radius: 4px;
         border: 1px solid gray;
     }
@@ -337,13 +339,16 @@ hr {
 
 
 #cards {
+
     /* para sobrepor section hero */
     position: relative;
+    margin-bottom: 50vh;
     z-index: 1;
-    top: 50vh;
-    margin-bottom: calc(50vh + 16px);
+    top: 40vh;
 
-    /* para organizar cards internamente */
+}
+
+#cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -360,8 +365,6 @@ hr {
     padding: 8px;
     margin: 8px;
     background-color: white;
-    border-radius: 2px;
-    border: 1px solid gray;
 
     & img {
         width: 200px;
